@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane layoutX="-1.0" layoutY="7.0">
+         <top>
+            <HBox BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Main Menu">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <HBox BorderPane.alignment="CENTER">
+               <children>
+                  <Region prefHeight="425.0" prefWidth="44.0" />
+                  <VBox>
+                     <children>
+                        <RadioButton fx:id="btnGT" mnemonicParsing="false" onAction="#pressGT" selected="true" text="Generic Tree">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="TypeTree" />
+                           </toggleGroup>
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="btnBiT" mnemonicParsing="false" onAction="#pressBiT" text="Binary Tree" toggleGroup="$TypeTree">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="11.0" />
+                           </font></RadioButton>
+                        <RadioButton fx:id="btnBaT" mnemonicParsing="false" onAction="#pressBaT" text="Balanced Tree" toggleGroup="$TypeTree">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="11.0" />
+                           </font></RadioButton>
+                        <RadioButton fx:id="btnBaBiT" mnemonicParsing="false" onAction="#pressBaBiT" prefWidth="127.0" text="Balanced Binary Tree" toggleGroup="$TypeTree">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="11.0" />
+                           </font></RadioButton>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <HBox>
+                           <children>
+                              <Label text="Root Node" />
+                              <Region prefHeight="100.0" prefWidth="35.0" />
+                              <TextField fx:id="rootTextbox" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="117.0">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox fx:id="Box">
+                           <children>
+                              <Label text="Different">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin></Label>
+                              <Region prefHeight="100.0" prefWidth="45.0" />
+                              <TextField fx:id="diffTextBox" prefHeight="25.0" prefWidth="118.0">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="helpBox" visible="false">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Create tree : Create a tree for type tree you choose " wrappingWidth="248.7689208984375" />
+                        <Text layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Generic,Binary insert Root Node only" wrappingWidth="248.7689208984375" />
+                        <Text layoutX="10.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Balanced Tree, Balanced Binary Tree insert Root Node and Max Different on Diff Text Box" wrappingWidth="248.7689208984375" />
+                        <Text layoutX="10.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quit : Exit the screen" wrappingWidth="248.7689208984375" />
+                        <Text layoutX="10.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOTE : Node when create are not negative if you insert it will print Error" wrappingWidth="248.7689208984375" />
+                        <Text layoutX="10.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enjoy !" wrappingWidth="248.7689208984375" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </center>
+         <left>
+            <VBox BorderPane.alignment="CENTER">
+               <children>
+                  <ButtonBar>
+                    <buttons>
+                      <Button mnemonicParsing="false" onAction="#pressCreateTree" text="Create Tree" />
+                    </buttons>
+                     <padding>
+                        <Insets bottom="30.0" top="10.0" />
+                     </padding>
+                  </ButtonBar>
+                  <ButtonBar layoutX="10.0" layoutY="10.0">
+                     <buttons>
+                        <Button mnemonicParsing="false" onAction="#pressHelp" text="Help" />
+                     </buttons>
+                     <padding>
+                        <Insets bottom="30.0" top="10.0" />
+                     </padding>
+                  </ButtonBar>
+                  <ButtonBar layoutX="10.0" layoutY="10.0">
+                     <buttons>
+                        <Button mnemonicParsing="false" onAction="#pressQuit" text="Quit" />
+                     </buttons>
+                     <padding>
+                        <Insets bottom="20.0" top="10.0" />
+                     </padding>
+                  </ButtonBar>
+               </children>
+            </VBox>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>

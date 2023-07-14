@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+   <children>
+      <BorderPane>
+         <top>
+            <TabPane tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab text="Insertion">
+                  <content>
+                    <AnchorPane>
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <HBox>
+                                       <children>
+                                          <Label text="Parent Node">
+                                             <HBox.margin>
+                                                <Insets right="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="tfParent" />
+                                          <Button fx:id="btnInsert" mnemonicParsing="false" text="Insert" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="20.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox>
+                                       <children>
+                                          <Label text="Child Node">
+                                             <HBox.margin>
+                                                <Insets right="15.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Region prefHeight="26.0" prefWidth="15.0" />
+                                          <TextField fx:id="tfChild" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Search">
+                     <content>
+                        <AnchorPane>
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <HBox>
+                                       <children>
+                                          <Label text="Node Search">
+                                             <HBox.margin>
+                                                <Insets right="15.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="tfSearch" />
+                                          <Button mnemonicParsing="false" onAction="#btnSearch" text="Search" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="20.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Remove">
+                     <content>
+                        <AnchorPane>
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <HBox>
+                                       <children>
+                                          <Label text="Node Remove">
+                                             <HBox.margin>
+                                                <Insets right="15.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="tfRemove" />
+                                          <Button mnemonicParsing="false" onAction="#btnRemove" text="Remove" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="20.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Update">
+                     <content>
+                        <AnchorPane>
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <HBox>
+                                       <children>
+                                          <Label text="Node Update">
+                                             <HBox.margin>
+                                                <Insets right="17.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Region prefHeight="26.0" prefWidth="7.0" />
+                                          <TextField fx:id="tfNode" />
+                                          <Button mnemonicParsing="false" onAction="#btnUpdate" text="Update" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="20.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox>
+                                       <children>
+                                          <Label text="Update To">
+                                             <HBox.margin>
+                                                <Insets right="15.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Region prefHeight="26.0" prefWidth="26.0" />
+                                          <TextField fx:id="tfUpdate" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Travelsal">
+                     <content>
+                        <AnchorPane>
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <VBox>
+                                       <children>
+                                          <RadioButton fx:id="btBFS" mnemonicParsing="false" selected="true" text="BFS">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="typeTravelsal" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <HBox>
+                                             <children>
+                                                <Region prefHeight="32.0" prefWidth="112.0" />
+                                                <Button mnemonicParsing="false" onAction="#btnStart" text="Start" />
+                                             </children>
+                                          </HBox>
+                                          <RadioButton fx:id="btDFS" mnemonicParsing="false" text="DFS" toggleGroup="$typeTravelsal" />
+                                       </children>
+                                    </VBox>
+                                    <Region prefHeight="92.0" prefWidth="44.0" />
+                                    <VBox prefHeight="92.0" prefWidth="206.0">
+                                       <children>
+                                          <ButtonBar>
+                                            <buttons>
+                                              <Button mnemonicParsing="false" onAction="#btnPause" text="Pause" />
+                                                <Button mnemonicParsing="false" onAction="#btnBack" text="Back" />
+                                            </buttons>
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                          </ButtonBar>
+                                          <ButtonBar>
+                                            <buttons>
+                                              <Button mnemonicParsing="false" onAction="#btnContinue" text="Continue" />
+                                                <Button mnemonicParsing="false" onAction="#btnNext" text="Next" />
+                                            </buttons>
+                                          </ButtonBar>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Menu">
+                    <content>
+                      <AnchorPane>
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#btnBackMenu" text="Back Menu" />
+                                    <Region prefHeight="32.0" prefWidth="65.0" />
+                                    <Button mnemonicParsing="false" onAction="#btnQuit" text="Quit" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </top>
+         <center>
+            <AnchorPane fx:id="treeBoard" BorderPane.alignment="CENTER" />
+         </center>
+         <bottom>
+            <HBox BorderPane.alignment="CENTER">
+               <children>
+                  <Region prefHeight="40.0" prefWidth="258.0" />
+                  <ButtonBar prefHeight="40.0" prefWidth="200.0">
+                    <buttons>
+                      <Button mnemonicParsing="false" onAction="#btnUndo" text="Undo" />
+                        <Button mnemonicParsing="false" onAction="#btnRedo" text="Redo" />
+                    </buttons>
+                  </ButtonBar>
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
